@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :produits
   resources :clients
  root'pages#home'
 

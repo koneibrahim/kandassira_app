@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_pro: MyString
+  type_pro: MyString
+  prix: 1
+  qte_pro: 1
+
+two:
+  nom_pro: MyString
+  type_pro: MyString
+  prix: 1
+  qte_pro: 1
