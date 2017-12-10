@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_ac: 2017-12-10
+  id_fo: 1
+  somme: 1
+  payee: 1
+
+two:
+  date_ac: 2017-12-10
+  id_fo: 1
+  somme: 1
+  payee: 1

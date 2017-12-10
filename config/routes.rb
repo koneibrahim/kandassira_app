@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :achats
+  resources :fournisseurs
   resources :produits
   resources :clients
  root'pages#home'

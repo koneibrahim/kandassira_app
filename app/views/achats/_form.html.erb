@@ -1,0 +1,37 @@
+<%= form_with(model: achat, local: true) do |form| %>
+  <% if achat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(achat.errors.count, "error") %> prohibited this achat from being saved:</h2>
+
+      <ul>
+      <% achat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_ac %>
+    <%= form.date_select :date_ac, id: :achat_date_ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_fo %>
+    <%= form.number_field :id_fo, id: :achat_id_fo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :somme %>
+    <%= form.number_field :somme, id: :achat_somme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payee %>
+    <%= form.number_field :payee, id: :achat_payee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

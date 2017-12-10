@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date ac:</strong>
+  <%= @achat.date_ac %>
+</p>
+
+<p>
+  <strong>Id fo:</strong>
+  <%= @achat.id_fo %>
+</p>
+
+<p>
+  <strong>Somme:</strong>
+  <%= @achat.somme %>
+</p>
+
+<p>
+  <strong>Payee:</strong>
+  <%= @achat.payee %>
+</p>
+
+<%= link_to 'Edit', edit_achat_path(@achat) %> |
+<%= link_to 'Back', achats_path %>
