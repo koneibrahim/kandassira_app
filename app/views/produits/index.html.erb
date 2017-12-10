@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Produits</h1>
-
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
-    <tr>
+    <tr class="info">
       <th>Nom pro</th>
       <th>Type pro</th>
       <th>Prix</th>
@@ -29,7 +29,9 @@
 </table>
 
 <br>
-
-<%= link_to 'New Produit', new_produit_path %>
+<p>New product:
+        <a href="/produits/new" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Add
+<!---<%= link_to 'New Produit', new_produit_path %>--->
 
 <li><a href="/"> Retour sur la page d'accueil </a> <br></li>
