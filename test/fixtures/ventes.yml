@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_vente: 2017-12-12 19:02:34
+  client: one
+  somme: 9.99
+  payee: 9.99
+
+two:
+  date_vente: 2017-12-12 19:02:34
+  client: two
+  somme: 9.99
+  payee: 9.99

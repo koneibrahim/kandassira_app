@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Achats</h1>
-<div class="table-responsive">
-<table class="table table-bordered table-striped">  
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
   <thead>
     <tr class="info">
+
+      <th>N°</th>
       <th>Date ac</th>
       <th>Id fo</th>
       <th>Somme</th>
@@ -14,8 +16,12 @@
   </thead>
 
   <tbody>
-    <% @achats.each do |achat| %>
+    <%
+    @i=1;
+    @achats.each do |achat|
+       %>
       <tr>
+        <td><%= @i %></td>
         <td><%= achat.date_ac %></td>
         <td><%= achat.id_fo %></td>
         <td><%= achat.somme %></td>
@@ -24,14 +30,15 @@
         <td><%= link_to 'Edit', edit_achat_path(achat) %></td>
         <td><%= link_to 'Destroy', achat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%
+    @i+=1
+  end
+   %>
   </tbody>
 </table>
+</div>
 
 <br>
 <p>New achat:
         <a href="/achats/new" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus"></span> Add
-
-<!--- <%= link_to 'New Achat', new_achat_path %>--->
-<li><a href="/"> Retour sur la page d'accueil </a> <br></li>
+          <span class="glyphicon glyphicon-plus"></span> Add </a></p>

@@ -5,6 +5,7 @@
 <table class="table table-bordered">
   <thead>
     <tr class="info">
+      <th>N°</th>
       <th>Nom fo</th>
       <th>Adresse fo</th>
       <th>Company</th>
@@ -13,8 +14,12 @@
   </thead>
 
   <tbody>
-    <% @fournisseurs.each do |fournisseur| %>
+    <%
+    @i=1;
+    @fournisseurs.each do |fournisseur|
+     %>
       <tr>
+        <td><%= @i %></td>
         <td><%= fournisseur.nom_fo %></td>
         <td><%= fournisseur.adresse_fo %></td>
         <td><%= fournisseur.company %></td>
@@ -22,15 +27,14 @@
         <td><%= link_to 'Edit', edit_fournisseur_path(fournisseur) %></td>
         <td><%= link_to 'Destroy', fournisseur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%
+    @i+=1
+  end
+   %>
   </tbody>
 </table>
 
 <br>
 <p>New fournisseur:
         <a href="/fournisseurs/new" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus"></span> Add
-
-<!--<%= link_to 'New Client', new_client_path %></a> -->
-
-<li><a href="/"> Retour sur la page d'accueil </a> <br></li>
+          <span class="glyphicon glyphicon-plus"></span> Add </a></p>

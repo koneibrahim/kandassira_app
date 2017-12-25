@@ -1,0 +1,37 @@
+<%= form_with(model: vente, local: true) do |form| %>
+  <% if vente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vente.errors.count, "error") %> prohibited this vente from being saved:</h2>
+
+      <ul>
+      <% vente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_vente %>
+    <%= form.datetime_select :date_vente, id: :vente_date_vente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.text_field :client_id, id: :vente_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :somme %>
+    <%= form.text_field :somme, id: :vente_somme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payee %>
+    <%= form.text_field :payee, id: :vente_payee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

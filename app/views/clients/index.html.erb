@@ -1,10 +1,15 @@
-<p id="notice"><%= notice %></p>
 
+<p id="notice"><%= notice %></p>
 <h1>Clients</h1>
-<div class="table-responsive">
-<table class="table table-bordered">
-  <thead>
+<div class="contenair">
+  <div class="row">
+<p>  <%=  render(:partial => 'layouts/partials/sidebar') %></p>
+  <div class="col-xs-9 col-sm-9">
+   <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
     <tr class="info">
+      <th>N°</th>
       <th>Name</th>
       <th>Date nai</th>
       <th>Contact</th>
@@ -13,8 +18,12 @@
   </thead>
 
   <tbody>
-    <% @clients.each do |client| %>
+    <%
+    @i=1;
+    @clients.each do |client|
+       %>
       <tr>
+        <td><%= @i %></td>
         <td><%= client.name %></td>
         <td><%= client.date_nai %></td>
         <td><%= client.contact %></td>
@@ -22,15 +31,17 @@
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%
+    @i+=1
+  end
+   %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 <p>New client:
         <a href="/clients/new" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus"></span> Add
+          <span class="glyphicon glyphicon-plus"></span> Add </a></p>
 
 <!--<%= link_to 'New Client', new_client_path %></a> -->
-
-<li><a href="/"> Retour sur la page d'accueil </a> <br></li>

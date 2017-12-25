@@ -5,6 +5,7 @@
 <table class="table table-bordered  table-striped">
   <thead>
     <tr class="info">
+      <th>N°</th>
       <th>Nom pro</th>
       <th>Type pro</th>
       <th>Prix</th>
@@ -14,8 +15,12 @@
   </thead>
 
   <tbody>
-    <% @produits.each do |produit| %>
+    <%
+    @i=1;
+    @produits.each do |produit|
+       %>
       <tr>
+        <td><%= @i %></td>
         <td><%= produit.nom_pro %></td>
         <td><%= produit.type_pro %></td>
         <td><%= produit.prix %></td>
@@ -24,14 +29,14 @@
         <td><%= link_to 'Edit', edit_produit_path(produit) %></td>
         <td><%= link_to 'Destroy', produit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%
+    @i+=1
+  end
+   %>
   </tbody>
 </table>
 
 <br>
 <p>New product:
         <a href="/produits/new" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus"></span> Add
-<!---<%= link_to 'New Produit', new_produit_path %>--->
-
-<li><a href="/"> Retour sur la page d'accueil </a> <br></li>
+          <span class="glyphicon glyphicon-plus"></span> Add</a></p>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom pro:</strong>
+  <%= @contenu_acha.nom_pro %>
+</p>
+
+<p>
+  <strong>Type pro:</strong>
+  <%= @contenu_acha.type_pro %>
+</p>
+
+<p>
+  <strong>Qte pro:</strong>
+  <%= @contenu_acha.qte_pro %>
+</p>
+
+<p>
+  <strong>Achat:</strong>
+  <%= @contenu_acha.achat %>
+</p>
+
+<p>
+  <strong>Montant:</strong>
+  <%= @contenu_acha.montant %>
+</p>
+
+<p>
+  <strong>Produit:</strong>
+  <%= @contenu_acha.produit %>
+</p>
+
+<%= link_to 'Edit', edit_contenu_acha_path(@contenu_acha) %> |
+<%= link_to 'Back', contenu_achas_path %>
