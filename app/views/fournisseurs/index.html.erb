@@ -1,40 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-sm-3">
+          <!--<%= render(:partial => 'layouts/partials/sidebar') %>--->
+         </div>
+          <div class="col-xs-9 col-sm-9">
+            <h1>Fournisseurs</h1>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="info">
+                    <th>N°</th>
+                    <th>Nom fournisseur</th>
+                    <th>Adresse</th>
+                    <th>Company</th>
+                    <th colspan="3"></th>
+                  </tr>
+                </thead>
 
-<h1>Fournisseurs</h1>
-<div class="table-responsive">
-<table class="table table-bordered">
-  <thead>
-    <tr class="info">
-      <th>N°</th>
-      <th>Nom fo</th>
-      <th>Adresse fo</th>
-      <th>Company</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%
-    @i=1;
-    @fournisseurs.each do |fournisseur|
-     %>
-      <tr>
-        <td><%= @i %></td>
-        <td><%= fournisseur.nom_fo %></td>
-        <td><%= fournisseur.adresse_fo %></td>
-        <td><%= fournisseur.company %></td>
-        <td><%= link_to 'Show', fournisseur %></td>
-        <td><%= link_to 'Edit', edit_fournisseur_path(fournisseur) %></td>
-        <td><%= link_to 'Destroy', fournisseur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <%
-    @i+=1
-  end
-   %>
-  </tbody>
-</table>
-
-<br>
-<p>New fournisseur:
-        <a href="/fournisseurs/new" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus"></span> Add </a></p>
+                      <tbody>
+                        <%
+                        @i=1;
+                        @fournisseurs.each do |fournisseur|
+                         %>
+                          <tr>
+                            <td><%= @i %></td>
+                            <td><%= fournisseur.nom_fo %></td>
+                            <td><%= fournisseur.adresse_fo %></td>
+                            <td><%= fournisseur.company %></td>
+                            <td><%= link_to 'Show', fournisseur %></td>
+                            <td><%= link_to 'Edit', edit_fournisseur_path(fournisseur) %></td>
+                            <td><%= link_to 'Destroy', fournisseur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                          </tr>
+                        <%
+                        @i+=1
+                      end
+                       %>
+                      </tbody>
+                      <br>
+                      <p>New fournisseur:
+                              <a href="/fournisseurs/new" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-plus"></span> Add </a></p>
+            </table>
+        </div>
+    </div>
+</div>
