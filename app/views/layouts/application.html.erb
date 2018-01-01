@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Le super app de Kandassira</title>
-    <%= csrf_meta_tags %>
+    <html>
+        <head>
+          <title>Le super app de Kandassira</title>
+          <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
+          <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        </head>
+              <body>
+                <div class="container">
 
-  <!---  <%= render(:partial => 'layouts/partials/header') %>--->
+                <%= render 'layouts/partials/menu' %>
 
-    <%= render(:partial => 'layouts/partials/menu') %>
+            <!---   <%= render 'layouts/partials/sidebar' %>-->
 
-  <!---  <%= render(:partial => 'layouts/partials/sidebar') %> ---->
+                <%= yield %>
 
+                <%= render 'layouts/partials/footer' %>
 
-    <%= yield %>
+              </div>
 
-    <%= render(:partial => 'layouts/partials/footer') %>
-
-
-
-</body>
+            </body>
 
 </html>
