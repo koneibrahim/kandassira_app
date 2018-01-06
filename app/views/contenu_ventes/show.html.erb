@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vente:</strong>
+  <%= @contenu_vente.vente %>
+</p>
+
+<p>
+  <strong>Produit:</strong>
+  <%= @contenu_vente.produit %>
+</p>
+
+<p>
+  <strong>Nom pro:</strong>
+  <%= @contenu_vente.nom_pro %>
+</p>
+
+<p>
+  <strong>Type pro:</strong>
+  <%= @contenu_vente.type_pro %>
+</p>
+
+<p>
+  <strong>Qte pro:</strong>
+  <%= @contenu_vente.qte_pro %>
+</p>
+
+<p>
+  <strong>Montant:</strong>
+  <%= @contenu_vente.montant %>
+</p>
+
+<%= link_to 'Edit', edit_contenu_vente_path(@contenu_vente) %> |
+<%= link_to 'Back', contenu_ventes_path %>

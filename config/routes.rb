@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contenu_ventes
   resources :contenu_achas
   resources :ventes
   resources :achats

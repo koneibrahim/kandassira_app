@@ -1,12 +1,12 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
+ <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-3 col-sm-3">
-          <!--<%= render(:partial => 'layouts/partials/sidebar') %>--->
-     </div>
-      <div class="col-xs-9 col-sm-9">
+      <div class="col-xs-2 col-sm-2">
+        </div>
+      <div class="col-xs-8 col-sm-8">
         <h1>Produits</h1>
         <div class="table-responsive">
-          <table class="table table-bordered table-striped">
+          <table class="table table-bordered table-condensed table-striped">
           <thead>
               <tr class="info">
                 <th>N°</th>
@@ -39,9 +39,11 @@
             %>
         </tbody>
         <br>
-        <p>New product:
-                <a href="/produits/new" class="btn btn-default btn-sm">
-                  <span class="glyphicon glyphicon-plus"></span> Add</a></p>
-                </table>
-              </div>
+                <a href="/produits/new" class="btn btn-primary btn-block">
+                  <span class="glyphicon glyphicon-plus"></span> Add new produit</a></p>
+                  </table>
+                  </div>
+                  <div class="col-xs-2 col-sm-2">
+                    </div>
             </div>
+          </div>

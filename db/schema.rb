@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213170713) do
+ActiveRecord::Schema.define(version: 20180103195608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,19 @@ ActiveRecord::Schema.define(version: 20171213170713) do
     t.index ["produit_id"], name: "index_contenu_achas_on_produit_id"
   end
 
+  create_table "contenu_ventes", force: :cascade do |t|
+    t.bigint "vente_id"
+    t.bigint "produit_id"
+    t.string "nom_pro"
+    t.string "type_pro"
+    t.integer "qte_pro"
+    t.decimal "montant"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["produit_id"], name: "index_contenu_ventes_on_produit_id"
+    t.index ["vente_id"], name: "index_contenu_ventes_on_vente_id"
+  end
+
   create_table "fournisseurs", force: :cascade do |t|
     t.string "nom_fo"
     t.string "adresse_fo"
@@ -74,5 +87,7 @@ ActiveRecord::Schema.define(version: 20171213170713) do
 
   add_foreign_key "contenu_achas", "achats"
   add_foreign_key "contenu_achas", "produits"
+  add_foreign_key "contenu_ventes", "produits"
+  add_foreign_key "contenu_ventes", "ventes"
   add_foreign_key "ventes", "clients"
 end

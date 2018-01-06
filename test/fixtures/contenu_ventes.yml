@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vente: one
+  produit: one
+  nom_pro: MyString
+  type_pro: MyString
+  qte_pro: 1
+  montant: 9.99
+
+two:
+  vente: two
+  produit: two
+  nom_pro: MyString
+  type_pro: MyString
+  qte_pro: 1
+  montant: 9.99
