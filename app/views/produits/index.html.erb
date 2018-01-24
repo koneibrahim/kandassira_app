@@ -1,14 +1,13 @@
- <p id="notice"><%= notice %></p>
- <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-2 col-sm-2">
-        </div>
-      <div class="col-xs-8 col-sm-8">
-        <h1>Produits</h1>
-        <div class="table-responsive">
-          <table class="table table-bordered table-condensed table-striped">
-          <thead>
-              <tr class="info">
+<p id="notice"><%= notice %></p>
+ <div class="row">
+   <div class="col-xs-3 col-sm-3">
+      </div>
+       <div class="col-xs-9 col-sm-9">
+         <h1>Produits</h1>
+         <div class="table-responsive">
+           <table class="table table-bordered table-striped">
+           <thead>
+             <tr class="info">
                 <th>N°</th>
                 <th>Nom produit</th>
                 <th>Type produit</th>
@@ -16,8 +15,7 @@
                 <th>Qte produit</th>
                 <th colspan="3"></th>
               </tr>
-          </thead>
-
+           </thead>
         <tbody>
             <%
             @i=1;
@@ -25,25 +23,24 @@
               %>
               <tr>
                   <td><%= @i %></td>
-                  <td class=""><%= produit.nom_pro %></td>
+                  <td><%= produit.nom_pro %></td>
                   <td><%= produit.type_pro %></td>
                   <td><%= produit.prix %></td>
                   <td><%= produit.qte_pro %></td>
                   <td><%= link_to 'Show', produit %></td>
                   <td><%= link_to 'Edit', edit_produit_path(produit) %></td>
                   <td><%= link_to 'Destroy', produit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-              <%
-              @i+=1
-            end
-            %>
-        </tbody>
-        <br>
-                <a href="/produits/new" class="btn btn-primary btn-block">
-                  <span class="glyphicon glyphicon-plus"></span> Add new produit</a></p>
-                  </table>
-                  </div>
-                  <div class="col-xs-2 col-sm-2">
-                    </div>
+                    </tr>
+                      <%
+                      @i+=1
+                    end
+                    %>
+                </tbody>
+                <br>
+                <p>New produit:
+                <a href="/produits/new" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-plus"></span> Add </a></p>
+                </table>
             </div>
           </div>
+        </div>

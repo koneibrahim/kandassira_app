@@ -1,2 +1,3 @@
 class Produit < ApplicationRecord
-end
+  has_many :contenu_ventes
+  end

@@ -4,6 +4,7 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.string :name
       t.datetime :date_nai
       t.string :contact
+      t.string :tel
 
       t.timestamps
     end

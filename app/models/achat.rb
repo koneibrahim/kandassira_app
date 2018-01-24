@@ -1,3 +1,3 @@
 class Achat < ApplicationRecord
-  has_many :contenu_achas
+belongs_to :fournisseur
 end
