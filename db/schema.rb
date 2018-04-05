@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20180120122515) do
     t.bigint "produit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total"
     t.index ["achat_id"], name: "index_contenu_achas_on_achat_id"
     t.index ["produit_id"], name: "index_contenu_achas_on_produit_id"
   end

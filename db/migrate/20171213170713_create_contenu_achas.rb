@@ -5,6 +5,7 @@ class CreateContenuAchas < ActiveRecord::Migration[5.1]
       t.integer :qte_pro
       t.references :achat, foreign_key: true
       t.decimal :montant
+      t.decimal :total
       t.references :produit, foreign_key: true
 
       t.timestamps

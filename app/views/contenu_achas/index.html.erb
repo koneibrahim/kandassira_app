@@ -13,6 +13,8 @@
               <th>Nom produit</th>
               <th>Quantité produit</th>
               <th>Montant</th>
+              <th>Total</th>
+
               <th colspan="3"></th>
             </tr>
           </thead>
@@ -23,9 +25,10 @@
               %>
                 <tr>
                   <td><%= @i %></td>
-                  <td><%= contenu_acha.nom_pro %></td>
+                  <td><%= contenu_acha.produit.nom_pro %></td>
                   <td><%= contenu_acha.qte_pro %></td>
                   <td><%= contenu_acha.montant %></td>
+                  <td><%= contenu_acha.total %></td>
                   <td><%= link_to 'Show', contenu_acha %></td>
                   <td><%= link_to 'Edit', edit_contenu_acha_path(contenu_acha) %></td>
                   <td><%= link_to 'Destroy', contenu_acha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
